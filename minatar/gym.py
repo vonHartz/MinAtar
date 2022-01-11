@@ -59,12 +59,12 @@ def register_envs():
     for game in ["asterix", "breakout", "freeway", "seaquest", "space_invaders"]:
         name = game.title().replace('_', '')
         register(
-            id="{}-v0".format(name),
+            id="MinAtar-{}-v0".format(name),
             entry_point="minatar.gym:BaseEnv",
             kwargs=dict(game=game, display_time=50, use_minimal_action_set=False),
         )
         register(
-            id="{}-v1".format(name),
+            id="MinAtar-{}-v1".format(name),
             entry_point="minatar.gym:BaseEnv",
             kwargs=dict(game=game, display_time=50, use_minimal_action_set=True),
         )
